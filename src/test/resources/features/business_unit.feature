@@ -1,3 +1,4 @@
+@BusinessUnit
 Feature: Business Unit Feature
 
   Background: the user is logged in the StartSharp Page
