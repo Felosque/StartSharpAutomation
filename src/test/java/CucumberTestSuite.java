@@ -6,7 +6,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {"pretty"},
         features = "src/test/resources/features",
-        tags = "@Meeting"
+        tags = "@Meeting",
+        glue = "stepdefinitions"
 )
 public class CucumberTestSuite {
 }

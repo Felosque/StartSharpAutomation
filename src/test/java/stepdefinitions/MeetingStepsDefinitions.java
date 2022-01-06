@@ -49,14 +49,12 @@ public class MeetingStepsDefinitions {
         meetingName = data.get(0).getName();
         theActorInTheSpotlight().attemptsTo(
                 CreateNewMeetingTask.with(data.get(0))
+                Enter.theValue(meetingName).into(MeetingForm.SEARCH_MEETING)
         );
     }
 
     @Then("the meet is created")
     public void the_meet_is_created() {
-        theActorInTheSpotlight().attemptsTo(
-                Enter.theValue(meetingName).into(MeetingForm.SEARCH_MEETING)
-        );
         theActorInTheSpotlight().should(seeThat(
                 "The new meeting", MeetingQuestions.isTheMeetingVisible(), is(true)
         ));
